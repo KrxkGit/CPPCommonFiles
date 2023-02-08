@@ -1,0 +1,23 @@
+一.加载Skin++
+
+1.在(VC6)"Project->Settings->Link->Object/library"中加入SkinPPWTL.lib
+
+2.在你的程序中包含头文件
+#inlcude "SkinPPWTL.h"
+
+3.在程序中加入初始化语句InitInstance()
+skinppLoadSkin("DameK UltraBlue.ssk"); //加载皮肤
+
+
+二.卸载Skin++
+
+在程序的卸载函数中加入ExitInstance()
+skinppExitSkin(); //退出界面库，做清理工作。
+
+
+封装版使用方法：
+1.#include"FindLoadSkin.h"
+2.复制SkinPPWTL.lib到源文件目录
+3.【函数】加载：VOID FindLoadSkin();   卸载：skinppExitSkin();
+4.复制【*.SSK文件】【SkinPPWTL.dll】到可执行文件目录
+
